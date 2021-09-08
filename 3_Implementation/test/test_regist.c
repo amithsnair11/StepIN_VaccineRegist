@@ -11,17 +11,14 @@ void setUp(){}
 
 void tearDown(){}
 
-// Start Unit Test
 int main()
 {
   UNITY_BEGIN();
 
-// Run Test functions 
+// Run Test functions for registration and vaccine status
   RUN_TEST(test_regist_status);
   RUN_TEST(test_vaccine_status);
   
-
-  // End Unit Test
   return UNITY_END();
 }
 
@@ -29,14 +26,12 @@ int main()
 void test_regist_status(void) {
   TEST_ASSERT_EQUAL(-1, regist_status(123));
   
-  // Fail condition
-  TEST_ASSERT_EQUAL(-1, regist_status(150));
+  TEST_ASSERT_EQUAL(-1, regist_status(150)); // Fail condition
 }
 
 void test_vaccine_status(void) {
   TEST_ASSERT_EQUAL(1, vaccine_status(1));
   
-  // Fail condition
-  TEST_ASSERT_EQUAL(2, vaccine_status(1));
+  TEST_ASSERT_EQUAL(2, vaccine_status(1)); // Fail condition
 }
 

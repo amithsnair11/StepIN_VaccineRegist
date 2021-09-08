@@ -3,8 +3,7 @@
 
 int regist_status(long p){
 
-    //existregist();
-    
+    // Checks for registration details of new patients    
     pd[0].aadhar=p;
     int i=1;
     while(i<=1000){
@@ -19,6 +18,7 @@ int regist_status(long p){
     return -1;
 }
 
+// Checks how many doses should be given
 int vaccine_status(int i){
      
     if (pd[i].vaccine_doses==0){

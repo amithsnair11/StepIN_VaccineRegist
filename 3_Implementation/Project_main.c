@@ -2,16 +2,16 @@
 #include "regist.h"
 
 
-
+// Program begins from this section
 int main(){
     
-    int status;
-    long p;
-    int v1=0,v2=0;
+    int status;         // A return parameter to check status of patient
+    long p;             // Variable that stores patient's aadhar number
+    int v1=0,v2=0;      //Vaccine type 1 and 2 quantity
     
     existregist();
     
-    int attmpt=3;
+    int attmpt=1000;    // Variable that determines the total number of execution required by EOD
     while(attmpt>0){
         
     aply:
@@ -50,7 +50,7 @@ int main(){
         goto aply;
     }
     else if (status==0){
-        
+        //Verification
         printf("Confirm user, enter ph.number\n");
         prv1:
         scanf("%d",&pno);
@@ -78,6 +78,7 @@ int main(){
         }
     }
     else{
+        // Verification
         printf("Confirm user, enter ph.number\n");
         prv2:
         scanf("%d",&pno);
@@ -87,9 +88,9 @@ int main(){
             printf("Wrong credentials, try again\n");
             goto prv2;
         }nxt2:
-    printf("1:%d\n",pd[j].vaccine_doses);
-    vstat=vaccine_status(j);
-    printf("2:%d\n",pd[j].vaccine_doses);
+
+    vstat=vaccine_status(j);        //Status of patient based on being vaccinated
+
     if(vstat==1)
         printf("Please take your first vaccine\nYou have been vaccinated once\n");
     else if (vstat==2)
@@ -97,7 +98,7 @@ int main(){
     else if (vstat==3)
         printf("You have completed two dozes of vaccination\n");
     
-      
+    // Count of total number of vaccine vials used
     if(pd[j].vaccine_type==1 && (vstat==1 || vstat==2))
         v1++;
     else if(pd[j].vaccine_type==2 && (vstat==1 || vstat==2))
