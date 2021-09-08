@@ -21,7 +21,7 @@ Verification of the data is done based on the details provided by the patient. O
 * Encryption is not enabled to protect the data.
 * OTP verification is not activated for new registrations.
 ## SWOT Analysis
-![SWOT analysis](https://user-images.githubusercontent.com/89698000/132307662-0e4d8a61-bc57-4b5a-a1dc-ac773a4d311b.png)
+![SWOT analysis](https://user-images.githubusercontent.com/89698000/132556785-561d19ab-c53d-4658-8138-401da25ce78e.png)
 ## 4 W's and 1 H
 ### Who
 * Patient who needs to be vaccinated.
